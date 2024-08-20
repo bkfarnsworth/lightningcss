@@ -107,6 +107,7 @@ impl<'i> Pattern<'i> {
             "[name]" => Segment::Name,
             "[local]" => Segment::Local,
             "[hash]" => Segment::Hash,
+            "[content-hash]" => Segment::ContentHash,
             s => return Err(PatternParseError::UnknownPlaceholder(s.into(), start_idx)),
           };
           segments.push(segment);
